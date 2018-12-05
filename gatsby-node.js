@@ -97,6 +97,22 @@ exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
+  const allPokemon = ["pikachu", "charizard", "squirtle"];
+
+  createPage({
+    path: `/allPokemon`,
+    component: require.resolve("./src/templates/all-pokemon.js"),
+    context: { allPokemon },
+  })
+
+  allPokemon.forEach(pokemon => {
+    createPage({
+      path: `/pokemon/${pokemon.name}/`,
+      component: require.resolve("./src/templates/pokemon.js"),
+      context: { pokemon },
+    })
+  })
+
   return new Promise((resolve, reject) => {
     const postPage = path.resolve("src/templates/post.jsx");
     const tagPage = path.resolve("src/templates/tag.jsx");
