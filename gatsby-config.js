@@ -22,6 +22,13 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    {
+      resolve: "productApi",
+      options: {
+        key: "10912200-8a20375a5f4430c7a79d944d1",
+        q: "yellow flowers",
+      },
+    },
     "gatsby-plugin-lodash",
     "gatsby-plugin-sass",
     {
@@ -73,7 +80,7 @@ module.exports = {
       }
     },
     "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    
     "gatsby-plugin-catch-links",
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-twitter",
