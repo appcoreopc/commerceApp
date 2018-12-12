@@ -8,15 +8,16 @@ import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const postEdges = this.props.data.allProductApi.edges;
+    
     return (
-      <Layout location={this.props.location} title="Home">
+      <Layout title="Home">
         <div className="index-container">
           <Helmet>
             <title>{config.siteTitle}</title>
             <link rel="canonical" href={`${config.siteUrl}`} />
           </Helmet>
-          <SEO postEdges={postEdges} />
+         
           <PostListing postEdges={postEdges} />
         </div>
       </Layout>
@@ -28,26 +29,17 @@ export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [fields___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover
-            date
-          }
-        }
+   allProductApi {
+    edges {
+      node {
+        id
+        name
+        description
+        imgUri
+        productUri
+
       }
     }
+  }
   }
 `;

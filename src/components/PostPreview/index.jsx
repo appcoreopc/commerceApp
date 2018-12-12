@@ -44,32 +44,20 @@ class PostPreview extends Component {
     /* eslint no-undef: "off" */
     const coverHeight = mobile ? 162 : 225;
     return (
-      <Card key={postInfo.path} raise className="md-grid md-cell md-cell--12">
-        <Link style={{ textDecoration: "none" }} to={postInfo.path}>
+      <Card key={postInfo.id} raise className="md-grid md-cell md-cell--12">
+        <Link style={{ textDecoration: "none" }} to={postInfo.productId}>
           <Media style={{ height: coverHeight, paddingBottom: "0px" }}>
-            <PostCover postNode={postInfo} coverHeight={coverHeight} />
+        
             <MediaOverlay>
-              <CardTitle title={postInfo.title}>
+              <CardTitle title={postInfo.name}>
                 <Button raised secondary className="md-cell--right">
-                  Read
+                  Read {postInfo.name}
                 </Button>
               </CardTitle>
             </MediaOverlay>
           </Media>
         </Link>
-        <CardTitle
-          expander={expand}
-          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
-          title={`Published on ${moment(postInfo.date).format(
-            config.dateFormat
-          )}`}
-          subtitle={`${postInfo.timeToRead} min read`}
-        />
-
-        <CardText expandable={expand}>
-          {postInfo.excerpt}
-          <PostTags tags={postInfo.tags} />
-        </CardText>
+              
       </Card>
     );
   }
