@@ -1,4 +1,3 @@
-
 const fetch = require("node-fetch")
 const queryString = require("query-string")
 
@@ -11,23 +10,21 @@ exports.sourceNodes = (
     // Gatsby adds a configOption that's not needed for this plugin, delete it
     delete configOptions.plugins
     
-    // plugin code goes here...
-    console.log("Testing my plugin", configOptions)
+    const productApiUrl = "http://localhost:3000/product";
+    // Fetch a response from the apiUrl
     
-    
-    delete configOptions.plugins
     // Helper function that processes a photo to match Gatsby's node structure
-    const processPhoto = photo => {
-      const nodeId = createNodeId(`pixabay-photo-${photo.id}`)
-      const nodeContent = JSON.stringify(photo)
-      const nodeData = Object.assign({}, photo, {
+    const mapDataToNode = product => {
+      const nodeId = createNodeId(`pixabay-photo-${product.id}`)
+      const nodeContent = JSON.stringify(product)
+      const nodeData = Object.assign({}, product, {
         id: nodeId,
         parent: null,
         children: [],
         internal: {
-          type: `PixabayPhoto`,
+          type: `ProductApi`,
           content: nodeContent,
-          contentDigest: createContentDigest(photo),
+          contentDigest: createContentDigest(product),
           username : 'jeremywoo'
         },
       })
@@ -41,27 +38,18 @@ exports.sourceNodes = (
     // Join apiOptions with the Pixabay API URL
     const apiUrl = `https://pixabay.com/api/?${apiOptions}`
     
-    // Gatsby expects sourceNodes to return a promise
     return (
-      // Fetch a response from the apiUrl
-      // Fetch a response from the apiUrl
-      fetch(apiUrl)
+      
+      fetch(productApiUrl)
       // Parse the response as JSON
       .then(response => response.json())
-      // Process the response data into a node
+      // Process the JSON data into a node
       .then(data => {
-        // For each query result (or 'hit')
-        data.hits.forEach(photo => {
-          // Process the photo data to match the structure of a Gatsby node
-          const nodeData = processPhoto(photo)
-          // Use Gatsby's createNode helper to create a node from the node data
-          createNode(nodeData)
-        })
+        // For each query result (or 'hit')            
+        data.forEach(p => {
+          const nodeData = mapDataToNode(p);
+          createNode(nodeData);
+        });      
       })
-      )
-      
+      )      
     }
-    
-    
-    
-    
