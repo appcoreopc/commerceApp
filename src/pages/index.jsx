@@ -37,9 +37,8 @@ export const pageQuery = graphql`
         description
         imgUri
         productUri
-
       }
     }
   }
-  }
+}
 `;

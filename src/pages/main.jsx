@@ -3,7 +3,6 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-
 const IndexPage = (props) => (
   <div>
     <h1>Hi people</h1>

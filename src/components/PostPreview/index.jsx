@@ -60,7 +60,7 @@ class PostPreview extends Component {
 
         <CardTitle
           expander={expand}
-          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-calendar" />} />}
+          avatar={<Avatar icon={<FontIcon iconClassName="fa fa-shopping-cart" />} />}
           title={`Category : ${postInfo.category}`}
           subtitle={`${postInfo.description}`}
         />

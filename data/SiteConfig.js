@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Gatsby Material Starter", // Site title.
+  siteTitle: "CommerceApp", // Site title.
   siteTitleShort: "GM Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "GatsbyJS Material Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
@@ -10,7 +10,7 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   siteGATrackingID: "UA-47311644-4", // Tracking code ID for google analytics.
-  disqusShortname: "https-vagr9k-github-io-gatsby-material-starter", // Disqus shortname.
+  disqusShortname: "https://github.com/appcoreopc/commerceApp.git", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
@@ -24,7 +24,7 @@ module.exports = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-material-starter",
+      url: "https://github.com/appcoreopc/commerceApp.git",
       iconClassName: "fa fa-github"
     },
     {
@@ -34,9 +34,9 @@ module.exports = {
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
+      url: "mailto:appcommerce@gmail.com",
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2017. Material User" // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2018. Appcommerce" // Copyright string for the footer of the website and RSS feed.
 };

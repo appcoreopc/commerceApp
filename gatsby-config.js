@@ -79,6 +79,13 @@ module.exports = {
         color: "#c62828"
       }
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+      },
+    },
     "gatsby-transformer-sharp",
     
     "gatsby-plugin-catch-links",
