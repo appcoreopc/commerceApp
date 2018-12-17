@@ -30,6 +30,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-lodash",
+    `gatsby-plugin-offline`,
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
