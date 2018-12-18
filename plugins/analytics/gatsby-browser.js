@@ -13,4 +13,6 @@ exports.onServiceWorkerActive = ({
       head > style[data-href]
     `)
     console.log('plugin from brwser component ');
+
+    
   }
