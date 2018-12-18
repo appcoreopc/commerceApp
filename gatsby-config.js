@@ -21,13 +21,12 @@ module.exports = {
     }
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     {
-      resolve: "productApi",
+      resolve: "analytics",
       options: {
-        key: "10912200-8a20375a5f4430c7a79d944d1",
-        q: "yellow flowers",
-      },
+        username : "jeremy",
+        lastname: `woo`
+      }
     },
     "gatsby-plugin-lodash",
     `gatsby-plugin-offline`,
