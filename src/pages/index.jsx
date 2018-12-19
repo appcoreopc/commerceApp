@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
+
 import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
@@ -26,7 +26,6 @@ class Index extends React.Component {
 }
 
 export default Index;
-
 export const pageQuery = graphql`
   query IndexQuery {
    allProductApi {

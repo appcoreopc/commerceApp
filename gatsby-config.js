@@ -21,6 +21,14 @@ module.exports = {
     }
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "productApi",
+      options: {
+        key: "10912200-8a20375a5f4430c7a79d944d1",
+        q: "yellow flowers",
+      },
+    },
     {
       resolve: "analytics",
       options: {
