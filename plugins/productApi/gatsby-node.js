@@ -15,7 +15,7 @@ exports.sourceNodes = (
     
     // Helper function that processes a photo to match Gatsby's node structure
     const mapDataToNode = product => {
-      const nodeId = createNodeId(`pixabay-photo-${product.id}`)
+      const nodeId = createNodeId(`productapi-${product.id}`)
       const nodeContent = JSON.stringify(product)
       const nodeData = Object.assign({}, product, {
         id: nodeId,
@@ -25,19 +25,13 @@ exports.sourceNodes = (
           type: `ProductApi`,
           content: nodeContent,
           contentDigest: createContentDigest(product),
-          username : 'jeremywoo'
+          username : 'appcoreopc'
         },
       })
       
       return nodeData
     }
-    
-    // Convert the options object into a query string
-    const apiOptions = queryString.stringify(configOptions)
-    
-    // Join apiOptions with the Pixabay API URL
-    const apiUrl = `https://pixabay.com/api/?${apiOptions}`
-    
+  
     return (
       
       fetch(productApiUrl)
