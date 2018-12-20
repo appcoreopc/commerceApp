@@ -1,3 +1,4 @@
+
 let i = 0;
 postMessage(i);
 onmessage = function(e) {
@@ -5,4 +6,7 @@ onmessage = function(e) {
 }
 
 console.log('loading up cart worker ');
+
+
+postMessage('helolll');
 
