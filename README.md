@@ -2,6 +2,14 @@
 [![Issue Count](https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/issue_count.svg)](https://codeclimate.com/github/Vagr9K/gatsby-material-starter)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820)](https://www.codacy.com/app/Vagr9K/gatsby-material-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-material-starter&utm_campaign=Badge_Grade)
 
+
+Once of the feature i don't like about gatsbyjs
+
+1. building and generating images during build. Sometimes it timeout and it just takes too long to do a build. I would prefer if we separate this out into a separate image optimization service. 
+
+2. graphql breaksd during build. It is hard to say, i am not able to deploy cuz one of the service went down. 
+
+
 <div align="center">
     <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
 </div>
