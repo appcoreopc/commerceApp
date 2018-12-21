@@ -10,18 +10,6 @@ Once of the feature i don't like about gatsbyjs
 2. graphql breaksd during build. It is hard to say, i am not able to deploy cuz one of the service went down. 
 
 
-<div align="center">
-    <img src="docs/logo.png" alt="Logo" width='200px' height='200px'/>
-</div>
-
-# Gatsby Material Starter
-
-A blog starter with Material design in mind for [Gatsby](https://github.com/gatsbyjs/gatsby/).
-
-[Demo website.](https://vagr9k.github.io/gatsby-material-starter/)
-
-![Screenshot](docs/screenshot.png)
-
 ## GatsbyJS V2
 
 This starter is based on GatsbyJS V2, which brings progressive web app features such as automatic code and data splitting (by route), prefetching, with service worker/offline-first support and PRPL pattern.
